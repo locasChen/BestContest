@@ -1,29 +1,31 @@
-
-
 .navbar {
 	font-size: 20px;
 }
+
 .navbar img {
 	height: 20px;
 	float: left;
 }
 
 .thumbnail-time {
-    position: absolute;
-    top: 200px;
-    left: 0;
-    color: #CCCCCC;
+	position: absolute;
+	top: 200px;
+	left: 0;
+	color: #CCCCCC;
 }
 
-.projects-header a:link, .projects-header a:visited {
+.projects-header a:link,
+.projects-header a:visited {
 	color: #337ab7;
 	text-decoration: none;
 }
 
-.projects-header a:hover, .projects-header a:active {
+.projects-header a:hover,
+.projects-header a:active {
 	color: #23527C;
 	text-decoration: none;
 }
+
 
 /*#fast_login a:link, #fast_login a:visited {
 	color: #337ab7;
@@ -45,4 +47,50 @@
 
 #fast_login img {
 	width: 16px;
+}
+
+.user {
+	font-size: 14px;
+}
+
+.user-head {
+	background: #F0F0F0;
+	/*margin: 10px;*/
+	padding: 10px;
+	margin-bottom: 20px;
+}
+
+.user img {
+	max-width: 100%;
+	max-height: 100%;
+}
+
+.user table {
+	width: 100%;
+	max-width: 100%;
+	margin-bottom: 20px;
+	padding: 8px;
+	line-height: 1.42857143;
+	vertical-align: top;
+}
+
+.user table th,
+.user table td {
+	padding: 12px;
+	line-height: 1.42857143;
+}
+
+.info {
+	/*border: 1px solid #337ab7;*/
+	padding: 20px 0 20px 0;
+	font-size: 12px;
+}
+
+.info img {
+	max-width: 100%;
+}
+
+.annotations {
+	padding: 5px 15px;
+	color: gray;
 }
