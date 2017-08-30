@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+		<meta name="description" content="">
+		<meta name="author" content="">
+
+		<title>比赛 - BestContest</title>
+
+		<link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css" />
+		<link rel="stylesheet" type="text/css" href="../css/site.min.css" />
+		<link rel="stylesheet" type="text/css" href="../css/my_bootstrap.css" />
+		<link rel="stylesheet" type="text/css" href="../css/bootstrap-datetimepicker.min.css" />
+		<script type="text/javascript" src="../js/jquery-1.12.4.js"></script>
+		<script type="text/javascript" src="../js/bootstrap.min.js"></script>
+		<script type="text/javascript" src="../js/bootstrap-datetimepicker.min.js"></script>
+		<script type="text/javascript" src="../js/main.js"></script>
+		<script type="text/javascript" src="../js/locales/bootstrap-datetimepicker.zh-CN.js"></script>
+	</head>
+
+	<body>
+
+		<nav class="navbar navbar-inverse navbar-static-top">
+			<div class="container">
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+			            <span class="sr-only">Toggle navigation</span>
+			            <span class="icon-bar"></span>
+			            <span class="icon-bar"></span>
+			            <span class="icon-bar"></span>
+		            </button>
+					<a class="navbar-brand" href="../index.html">BestContest</a>
+				</div>
+				<div id="navbar" class="collapse navbar-collapse">
+					<ul class="nav navbar-nav">
+						<li>
+							<a href="../index.html">首页</a>
+						</li>
+						<li class="active">
+							<a href="/contest/waiting.html">比赛</a>
+						</li>
+						<li>
+							<a href="../group.html">组织</a>
+						</li>
+						<li>
+							<a href="../glory.html">荣誉榜</a>
+						</li>
+					</ul>
+					<ul class="nav navbar-nav navbar-right">
+						<li>
+							<a href="../login.html">登录</a>
+						</li>
+						<li>
+							<a href="../register.html">注册</a>
+						</li>
+						<li>
+							<a href="../user/info.html">
+								<img src="../img/head.png" class="img-circle center-block"> &nbsp;&nbsp;小明&nbsp;
+								<span class="badge">31</span>
+							</a>
+						</li>
+						<li>
+							<a href="#"><span class="glyphicon glyphicon-off"></span>&nbsp;&nbsp;退出</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+
+		<div class="container">
+			<ul class="nav nav-tabs">
+				<li role="presentation">
+					<a href="waiting.html">即将开始</a>
+				</li>
+				<li role="presentation">
+					<a href="running.html">已经开始</a>
+				</li>
+				<li role="presentation">
+					<a href="ending.html">已经结束</a>
+				</li>
+				<li role="presentation" class="active">
+					<a href="create.html">创建比赛</a>
+				</li>
+			</ul>
+		</div>
+
+		<div id="contest_ending" class="container projects">
+
+			<div class="projects-header page-header">
+				<h2>创建比赛</h2>
+				<p>通过一系列设置来创建一场比赛</p>
+			</div>
+
+			<form id="form_login_local" class="form-horizontal page" action="" method="post">
+
+				<h3 class="page-header">基本设置</h3>
+				<div class="form-group">
+					<label for="inputName" class="col-sm-2 col-xs-2 control-label">比赛名称</label>
+					<div class="col-sm-6 col-xs-10">
+						<input id="inputName" type="text" class="form-control" placeholder="输入比赛名称">
+					</div>
+					<div class="col-sm-4 col-sm-offset-0 col-xs-10 col-xs-offset-2 annotations">您最多可以输入15字</div>
+				</div>
+				<div class="form-group">
+					<label for="inputIntroduce" class="col-sm-2 col-xs-2 control-label">比赛简介</label>
+					<div class="col-sm-6 col-xs-10">
+						<textarea name="inputIntroduce" type="text" class="form-control" rows="5" style="resize: none;" placeholder="输入比赛的一些基本特征，或者参加比赛的意义、好处等。" /></textarea>
+					</div>
+					<div class="col-sm-4 col-sm-offset-0 col-xs-10 col-xs-offset-2 annotations">您最多可以输入150字</div>
+				</div>
+				<div class="form-group">
+					<label for="inputFileRedHead" class="col-sm-2 col-xs-2 control-label">红头文件</label>
+					<div class="col-sm-6 col-xs-10">
+						<input id="inputFileRedHead" type="file" class="form-control">
+					</div>
+					<div class="col-sm-4 col-sm-offset-0 col-xs-10 col-xs-offset-2 annotations">上传比赛的官方文档可以更快的审核</div>
+				</div>
+				<div class="form-group">
+					<label for="inputRank" class="col-sm-2 col-xs-2 control-label">比赛等级</label>
+					<div class="col-sm-6 col-xs-10">
+						<select class="form-control" id="inputRank">
+							<option value="0">校级比赛</option>
+							<option value="1">院系级比赛</option>
+							<option value="2">班级比赛</option>
+						</select>
+					</div>
+					<div class="col-sm-4 col-sm-offset-0 col-xs-10 col-xs-offset-2 annotations">比赛的等级</div>
+				</div>
+				<div class="form-group">
+					<label for="inputWay" class="col-sm-2 col-xs-2 control-label">比赛方式</label>
+					<div class="col-sm-6 col-xs-10">
+						<select class="form-control" id="inputWay">
+							<option value="0">个人赛</option>
+							<option value="1">组队赛</option>
+							<option value="2">班级赛</option>
+						</select>
+					</div>
+					<div class="col-sm-4 col-sm-offset-0 col-xs-10 col-xs-offset-2 annotations">比赛的方式</div>
+				</div>
+
+				<h3 class="page-header">时间轴</h3>
+				<div class="form-group">
+					<label for="datetimeStart" class="col-sm-2 col-xs-10 control-label">开始时间</label>
+					<div class="col-sm-6 col-xs-10">
+						<input type="text" id="datetimeStart" readonly class="form-control form_datetime" placeholder="选择开始时间" style="background: none;">
+					</div>
+					<div class="col-sm-4 col-sm-offset-0 col-xs-10 col-xs-offset-2 annotations">比赛的开始时间</div>
+				</div>
+				<div class="form-group">
+					<label for="datetimeEnd" class="col-sm-2 col-xs-10 control-label">截止时间</label>
+					<div class="col-sm-6 col-xs-10">
+						<input type="text" id="datetimeEnd" readonly class="form-control form_datetime" placeholder="选择结束时间" style="background: none;">
+					</div>
+					<div class="col-sm-4 col-sm-offset-0 col-xs-10 col-xs-offset-2 annotations">比赛的截止时间</div>
+				</div>
+
+				<h3 class="page-header">图片设置</h3>
+				<div class="form-group">
+					<label for="inputFilePropaganda" class="col-sm-2 col-xs-2 control-label">宣传图片</label>
+					<div class="col-sm-6 col-xs-10">
+						<input id="inputFilePropaganda" type="file" accept=".jpg,.png" class="form-control">
+					</div>
+					<div class="col-sm-4 col-sm-offset-0 col-xs-10 col-xs-offset-2 annotations">用于首页大屏幕轮播图（尺寸为1920px * 500px的.jpg/.png格式的图片）</div>
+				</div>
+				<div class="form-group">
+					<label for="inputFileThumbnail" class="col-sm-2 col-xs-2 control-label">缩略图片</label>
+					<div class="col-sm-6 col-xs-10">
+						<input id="inputFileThumbnail" type="file" accept=".jpg,.png" class="form-control">
+					</div>
+					<div class="col-sm-4 col-sm-offset-0 col-xs-10 col-xs-offset-2 annotations">用于比赛列表展示的缩略图（尺寸为300px * 150px的.jpg/.png格式的图片）</div>
+				</div>
+
+				<h3 class="page-header">奖项设置</h3>
+				<div class="form-group">
+					<label for="awardSpecial" class="col-sm-2 col-xs-2 control-label">特等奖</label>
+					<div class="col-sm-6 col-xs-10">
+						<input id="awardSpecial" type="number" class="form-control" placeholder="输入特等奖数量">
+					</div>
+					<div class="col-sm-4 col-sm-offset-0 col-xs-10 col-xs-offset-2 annotations">特等奖数量</div>
+				</div>
+				<div class="form-group">
+					<label for="prizeSpecial" class="col-sm-2 col-xs-2 control-label"></label>
+					<div class="col-sm-6 col-xs-10">
+						<input id="prizeSpecial" type="text" class="form-control" placeholder="输入特等奖奖品">
+					</div>
+					<div class="col-sm-4 col-sm-offset-0 col-xs-10 col-xs-offset-2 annotations">特等奖奖品</div>
+				</div>
+				<div class="form-group">
+					<label for="awardFirst" class="col-sm-2 col-xs-2 control-label">一等奖</label>
+					<div class="col-sm-6 col-xs-10">
+						<input type="number" class="form-control" placeholder="输入一等奖数量">
+					</div>
+					<div class="col-sm-4 col-sm-offset-0 col-xs-10 col-xs-offset-2 annotations">一等奖数量</div>
+				</div>
+				<div class="form-group">
+					<label for="prizeSpecial" class="col-sm-2 col-xs-2 control-label"></label>
+					<div class="col-sm-6 col-xs-10">
+						<input id="prizeSpecial" type="text" class="form-control" placeholder="输入一等奖奖品">
+					</div>
+					<div class="col-sm-4 col-sm-offset-0 col-xs-10 col-xs-offset-2 annotations">一等奖奖品</div>
+				</div>
+				<div class="form-group">
+					<label for="awardSecond" class="col-sm-2 col-xs-2 control-label">二等奖</label>
+					<div class="col-sm-6 col-xs-10">
+						<input id="awardSecond" type="number" class="form-control" placeholder="输入二等奖数量">
+					</div>
+					<div class="col-sm-4 col-sm-offset-0 col-xs-10 col-xs-offset-2 annotations">二等奖数量</div>
+				</div>
+				<div class="form-group">
+					<label for="prizeSpecial" class="col-sm-2 col-xs-2 control-label"></label>
+					<div class="col-sm-6 col-xs-10">
+						<input id="prizeSpecial" type="text" class="form-control" placeholder="输入二等奖奖品">
+					</div>
+					<div class="col-sm-4 col-sm-offset-0 col-xs-10 col-xs-offset-2 annotations">二等奖奖品</div>
+				</div>
+				<div class="form-group">
+					<label for="awardThird" class="col-sm-2 col-xs-2 control-label">三等奖</label>
+					<div class="col-sm-6 col-xs-10">
+						<input id="awardThird" type="number" class="form-control" placeholder="输入三等奖数量">
+					</div>
+					<div class="col-xm-2"></div>
+					<div class="col-sm-4 col-sm-offset-0 col-xs-10 col-xs-offset-2 annotations">三等奖数量</div>
+				</div>
+				<div class="form-group">
+					<label for="prizeSpecial" class="col-sm-2 col-xs-2 control-label"></label>
+					<div class="col-sm-6 col-xs-10">
+						<input id="prizeSpecial" type="text" class="form-control" placeholder="输入三等奖数量">
+					</div>
+					<div class="col-sm-4 col-sm-offset-0 col-xs-10 col-xs-offset-2 annotations">三等奖奖品</div>
+				</div>
+				<div class="form-group">
+					<label for="awardEncouragement" class="col-sm-2 col-xs-2 control-label">鼓励奖</label>
+					<div class="col-sm-6 col-xs-10">
+						<input id="awardEncouragement" type="number" class="form-control" placeholder="输入鼓励奖数量">
+					</div>
+					<div class="col-sm-4 col-sm-offset-0 col-xs-10 col-xs-offset-2 annotations">鼓励奖数量</div>
+				</div>
+				<div class="form-group">
+					<label for="prizeEncouragement" class="col-sm-2 col-xs-2 control-label"></label>
+					<div class="col-sm-6 col-xs-10">
+						<input id="prizeEncouragement" type="text" class="form-control" placeholder="输入鼓励奖奖品">
+					</div>
+					<div class="col-sm-4 col-sm-offset-0 col-xs-10 col-xs-offset-2 annotations">鼓励奖奖品</div>
+				</div>
+
+				<button type="submit" class="btn btn-primary form-control" style="margin: 50px 10px 10px 10px;">提交</button>
+				<button type="button" class="btn btn-default form-control" style="margin: 10px;">保存</button>
+
+			</form>
+
+		</div>
+
+		<footer class="footer ">
+			<div class="container">
+				<div class="row footer-top">
+					<div class="col-sm-6 col-lg-6">
+						<h4>
+            <img src="img/bestcontest.png">
+          </h4>
+						<p>本网站所列所有比赛均为第三方上传，并需要依照国家相关法律法规发布。</p>
+					</div>
+					<div class="col-sm-8  col-lg-4 col-lg-offset-2">
+						<div class="row about">
+							<div class="col-xs-4">
+								<h4>关于</h4>
+								<ul class="list-unstyled">
+									<li>
+										<a href="#">关于我们</a>
+									</li>
+									<li>
+										<a href="#">友情链接</a>
+									</li>
+								</ul>
+							</div>
+							<div class="col-xs-4">
+								<h4>反馈</h4>
+								<ul class="list-unstyled">
+									<li>
+										<a href="#" title="QQ群" target="_blank">问题反馈</a>
+									</li>
+									<li>
+										<a href="#">意见反馈</a>
+									</li>
+								</ul>
+							</div>
+							<div class="col-xs-4">
+								<h4>联系方式</h4>
+								<ul class="list-unstyled">
+									<li>
+										<a href="#" title="QQ群" target="_blank">QQ群</a>
+									</li>
+									<li>
+										<a href="locas.chen@outlook.com">电子邮件</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+
+					</div>
+				</div>
+				<hr/>
+				<!--<div class="row footer-bottom">
+					<ul class="list-inline text-center">
+						<li>
+							<a href="#" target="_blank">none</a>
+						</li>
+						<li>none</li>
+					</ul>
+				</div>-->
+			</div>
+		</footer>
+	</body>
+
+</html>
