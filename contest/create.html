@@ -101,21 +101,21 @@
 				<div class="form-group">
 					<label for="inputName" class="col-sm-2 col-xs-2 control-label">比赛名称</label>
 					<div class="col-sm-6 col-xs-10">
-						<input type="text" class="form-control" placeholder="输入比赛名称">
+						<input id="inputName" type="text" class="form-control" placeholder="输入比赛名称">
 					</div>
 					<div class="col-sm-4 col-sm-offset-0 col-xs-10 col-xs-offset-2 annotations">您最多可以输入15字</div>
 				</div>
 				<div class="form-group">
 					<label for="inputIntroduce" class="col-sm-2 col-xs-2 control-label">比赛简介</label>
 					<div class="col-sm-6 col-xs-10">
-						<textarea type="text" class="form-control" rows="5" style="resize: none;" placeholder="输入比赛的一些基本特征，或者参加比赛的意义、好处等。" /></textarea>
+						<textarea name="inputIntroduce" type="text" class="form-control" rows="5" style="resize: none;" placeholder="输入比赛的一些基本特征，或者参加比赛的意义、好处等。" /></textarea>
 					</div>
 					<div class="col-sm-4 col-sm-offset-0 col-xs-10 col-xs-offset-2 annotations">您最多可以输入150字</div>
 				</div>
 				<div class="form-group">
 					<label for="inputFileRedHead" class="col-sm-2 col-xs-2 control-label">红头文件</label>
 					<div class="col-sm-6 col-xs-10">
-						<input type="file" class="form-control">
+						<input id="inputFileRedHead" type="file" class="form-control">
 					</div>
 					<div class="col-sm-4 col-sm-offset-0 col-xs-10 col-xs-offset-2 annotations">上传比赛的官方文档可以更快的审核</div>
 				</div>
@@ -131,9 +131,9 @@
 					<div class="col-sm-4 col-sm-offset-0 col-xs-10 col-xs-offset-2 annotations">比赛的等级</div>
 				</div>
 				<div class="form-group">
-					<label for="inputRank" class="col-sm-2 col-xs-2 control-label">比赛方式</label>
+					<label for="inputWay" class="col-sm-2 col-xs-2 control-label">比赛方式</label>
 					<div class="col-sm-6 col-xs-10">
-						<select class="form-control" id="inputRank">
+						<select class="form-control" id="inputWay">
 							<option value="0">个人赛</option>
 							<option value="1">组队赛</option>
 							<option value="2">班级赛</option>
@@ -144,14 +144,14 @@
 
 				<h3 class="page-header">时间轴</h3>
 				<div class="form-group">
-					<label for="inputStartTime" class="col-sm-2 col-xs-10 control-label">开始时间</label>
+					<label for="datetimeStart" class="col-sm-2 col-xs-10 control-label">开始时间</label>
 					<div class="col-sm-6 col-xs-10">
 						<input type="text" id="datetimeStart" readonly class="form-control form_datetime" placeholder="选择开始时间" style="background: none;">
 					</div>
 					<div class="col-sm-4 col-sm-offset-0 col-xs-10 col-xs-offset-2 annotations">比赛的开始时间</div>
 				</div>
 				<div class="form-group">
-					<label for="inputStartTime" class="col-sm-2 col-xs-10 control-label">截止时间</label>
+					<label for="datetimeEnd" class="col-sm-2 col-xs-10 control-label">截止时间</label>
 					<div class="col-sm-6 col-xs-10">
 						<input type="text" id="datetimeEnd" readonly class="form-control form_datetime" placeholder="选择结束时间" style="background: none;">
 					</div>
@@ -162,30 +162,30 @@
 				<div class="form-group">
 					<label for="inputFilePropaganda" class="col-sm-2 col-xs-2 control-label">宣传图片</label>
 					<div class="col-sm-6 col-xs-10">
-						<input type="file" accept=".jpg,.png" class="form-control">
+						<input id="inputFilePropaganda" type="file" accept=".jpg,.png" class="form-control">
 					</div>
-					<div class="col-sm-4 col-sm-offset-0 col-xs-10 col-xs-offset-2 annotations" style="padding-top: 0;">用于首页大屏幕轮播图（尺寸为1920px * 500px的.jpg/.png格式的图片）</div>
+					<div class="col-sm-4 col-sm-offset-0 col-xs-10 col-xs-offset-2 annotations">用于首页大屏幕轮播图（尺寸为1920px * 500px的.jpg/.png格式的图片）</div>
 				</div>
 				<div class="form-group">
 					<label for="inputFileThumbnail" class="col-sm-2 col-xs-2 control-label">缩略图片</label>
 					<div class="col-sm-6 col-xs-10">
-						<input type="file" accept=".jpg,.png" class="form-control">
+						<input id="inputFileThumbnail" type="file" accept=".jpg,.png" class="form-control">
 					</div>
-					<div class="col-sm-4 col-sm-offset-0 col-xs-10 col-xs-offset-2 annotations" style="padding-top: 0;">用于比赛列表展示的缩略图（尺寸为300px * 150px的.jpg/.png格式的图片）</div>
+					<div class="col-sm-4 col-sm-offset-0 col-xs-10 col-xs-offset-2 annotations">用于比赛列表展示的缩略图（尺寸为300px * 150px的.jpg/.png格式的图片）</div>
 				</div>
 
 				<h3 class="page-header">奖项设置</h3>
 				<div class="form-group">
 					<label for="awardSpecial" class="col-sm-2 col-xs-2 control-label">特等奖</label>
 					<div class="col-sm-6 col-xs-10">
-						<input type="number" class="form-control" placeholder="输入特等奖数量">
+						<input id="awardSpecial" type="number" class="form-control" placeholder="输入特等奖数量">
 					</div>
 					<div class="col-sm-4 col-sm-offset-0 col-xs-10 col-xs-offset-2 annotations">特等奖数量</div>
 				</div>
 				<div class="form-group">
-					<label for="awardSpecial" class="col-sm-2 col-xs-2 control-label"></label>
+					<label for="prizeSpecial" class="col-sm-2 col-xs-2 control-label"></label>
 					<div class="col-sm-6 col-xs-10">
-						<input type="text" class="form-control" placeholder="输入特等奖奖品">
+						<input id="prizeSpecial" type="text" class="form-control" placeholder="输入特等奖奖品">
 					</div>
 					<div class="col-sm-4 col-sm-offset-0 col-xs-10 col-xs-offset-2 annotations">特等奖奖品</div>
 				</div>
@@ -197,52 +197,52 @@
 					<div class="col-sm-4 col-sm-offset-0 col-xs-10 col-xs-offset-2 annotations">一等奖数量</div>
 				</div>
 				<div class="form-group">
-					<label for="awardSpecial" class="col-sm-2 col-xs-2 control-label"></label>
+					<label for="prizeSpecial" class="col-sm-2 col-xs-2 control-label"></label>
 					<div class="col-sm-6 col-xs-10">
-						<input type="text" class="form-control" placeholder="输入一等奖奖品">
+						<input id="prizeSpecial" type="text" class="form-control" placeholder="输入一等奖奖品">
 					</div>
 					<div class="col-sm-4 col-sm-offset-0 col-xs-10 col-xs-offset-2 annotations">一等奖奖品</div>
 				</div>
 				<div class="form-group">
 					<label for="awardSecond" class="col-sm-2 col-xs-2 control-label">二等奖</label>
 					<div class="col-sm-6 col-xs-10">
-						<input type="number" class="form-control" placeholder="输入二等奖数量">
+						<input id="awardSecond" type="number" class="form-control" placeholder="输入二等奖数量">
 					</div>
 					<div class="col-sm-4 col-sm-offset-0 col-xs-10 col-xs-offset-2 annotations">二等奖数量</div>
 				</div>
 				<div class="form-group">
-					<label for="awardSpecial" class="col-sm-2 col-xs-2 control-label"></label>
+					<label for="prizeSpecial" class="col-sm-2 col-xs-2 control-label"></label>
 					<div class="col-sm-6 col-xs-10">
-						<input type="text" class="form-control" placeholder="输入二等奖奖品">
+						<input id="prizeSpecial" type="text" class="form-control" placeholder="输入二等奖奖品">
 					</div>
 					<div class="col-sm-4 col-sm-offset-0 col-xs-10 col-xs-offset-2 annotations">二等奖奖品</div>
 				</div>
 				<div class="form-group">
 					<label for="awardThird" class="col-sm-2 col-xs-2 control-label">三等奖</label>
 					<div class="col-sm-6 col-xs-10">
-						<input type="number" class="form-control" placeholder="输入三等奖数量">
+						<input id="awardThird" type="number" class="form-control" placeholder="输入三等奖数量">
 					</div>
 					<div class="col-xm-2"></div>
 					<div class="col-sm-4 col-sm-offset-0 col-xs-10 col-xs-offset-2 annotations">三等奖数量</div>
 				</div>
 				<div class="form-group">
-					<label for="awardSpecial" class="col-sm-2 col-xs-2 control-label"></label>
+					<label for="prizeSpecial" class="col-sm-2 col-xs-2 control-label"></label>
 					<div class="col-sm-6 col-xs-10">
-						<input type="text" class="form-control" placeholder="输入三等奖数量">
+						<input id="prizeSpecial" type="text" class="form-control" placeholder="输入三等奖数量">
 					</div>
 					<div class="col-sm-4 col-sm-offset-0 col-xs-10 col-xs-offset-2 annotations">三等奖奖品</div>
 				</div>
 				<div class="form-group">
 					<label for="awardEncouragement" class="col-sm-2 col-xs-2 control-label">鼓励奖</label>
 					<div class="col-sm-6 col-xs-10">
-						<input type="number" class="form-control" placeholder="输入鼓励奖数量">
+						<input id="awardEncouragement" type="number" class="form-control" placeholder="输入鼓励奖数量">
 					</div>
 					<div class="col-sm-4 col-sm-offset-0 col-xs-10 col-xs-offset-2 annotations">鼓励奖数量</div>
 				</div>
 				<div class="form-group">
-					<label for="awardSpecial" class="col-sm-2 col-xs-2 control-label"></label>
+					<label for="prizeEncouragement" class="col-sm-2 col-xs-2 control-label"></label>
 					<div class="col-sm-6 col-xs-10">
-						<input type="text" class="form-control" placeholder="输入鼓励奖奖品">
+						<input id="prizeEncouragement" type="text" class="form-control" placeholder="输入鼓励奖奖品">
 					</div>
 					<div class="col-sm-4 col-sm-offset-0 col-xs-10 col-xs-offset-2 annotations">鼓励奖奖品</div>
 				</div>
